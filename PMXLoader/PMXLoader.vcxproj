@@ -63,14 +63,25 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <ExternalIncludePath>C:\Users\Ye\source\repos\vcpkg\packages\glew_x64-windows\include;C:\Users\Ye\source\repos\vcpkg\packages\glm_x64-windows\include;C:\Users\Ye\source\repos\vcpkg\buildtrees\glad\x64-windows-rel\include;C:\Users\Ye\source\repos\vcpkg\packages\glfw3_x64-windows\include;C:\Users\Ye\source\repos\vcpkg\packages\glad_x64-windows\include;C:\Users\Ye\source\repos\vcpkg\packages\assimp_x64-windows\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)\includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <ExternalIncludePath>$(SolutionDir)\includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)libs\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Ye\source\repos\vcpkg\packages\glew_x64-windows\lib;C:\Users\Ye\source\repos\vcpkg\packages\glfw3_x64-windows\lib;C:\Users\Ye\source\repos\vcpkg\packages\glad_x64-windows\lib;C:\Users\Ye\source\repos\vcpkg\packages\assimp_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)libs\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)libs\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)libs\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
