@@ -6,7 +6,7 @@
       <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="common">
-      <UniqueIdentifier>{8f5ad1e5-0709-4688-8d03-d64fa3ee6061}</UniqueIdentifier>
+      <UniqueIdentifier>{04db2558-9772-4cec-a48f-e6168d3d182e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

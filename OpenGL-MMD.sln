@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PMXLoader", "PMXLoader\PMXLoader.vcxproj", "{8D1556F4-61CA-4ABF-AA07-585C2CFBB0B0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticModel", "StaticModel\StaticModel.vcxproj", "{CE780C82-96EF-4784-BB11-DDDBCD103D47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{8D1556F4-61CA-4ABF-AA07-585C2CFBB0B0}.Debug|x64.Build.0 = Debug|x64
 		{8D1556F4-61CA-4ABF-AA07-585C2CFBB0B0}.Release|x64.ActiveCfg = Release|x64
 		{8D1556F4-61CA-4ABF-AA07-585C2CFBB0B0}.Release|x64.Build.0 = Release|x64
+		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Debug|x64.ActiveCfg = Debug|x64
+		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Debug|x64.Build.0 = Debug|x64
+		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Release|x64.ActiveCfg = Release|x64
+		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
