@@ -8,6 +8,9 @@
     <Filter Include="common">
       <UniqueIdentifier>{04db2558-9772-4cec-a48f-e6168d3d182e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{f582e8cb-dc32-4d37-b676-45c93c77b8f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -16,10 +19,36 @@
     <ClCompile Include="..\common\assimploader.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="..\common\controls.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\texture.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\assimploader.hpp">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="..\common\controls.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\texture.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TextureFragmentShader.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="TransformVertexShader.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

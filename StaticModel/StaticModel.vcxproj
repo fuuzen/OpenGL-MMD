@@ -18,10 +18,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\common\assimploader.cpp" />
+    <ClCompile Include="..\common\controls.cpp" />
+    <ClCompile Include="..\common\shader.cpp" />
+    <ClCompile Include="..\common\texture.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\assimploader.hpp" />
+    <ClInclude Include="..\common\controls.hpp" />
+    <ClInclude Include="..\common\shader.hpp" />
+    <ClInclude Include="..\common\texture.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TextureFragmentShader.fragmentshader" />
+    <None Include="TransformVertexShader.vertexshader" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CE780C82-96EF-4784-BB11-DDDBCD103D47}</ProjectGuid>
