@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
+#include <string>
 
 #include <GL/glew.h>
 
@@ -42,6 +43,12 @@ int main(void)
 	}
 	glfwMakeContextCurrent(window);
 
+	// We would expect width and height to be 1024 and 768
+	int windowWidth = 1024;
+	int windowHeight = 768;
+	// But on MacOS X with a retina screen it'll be 1024*2 and 768*2, so we get the actual framebuffer size:
+	glfwGetFramebufferSize(window, &windowWidth, &windowHeight);
+
 	// Initialize GLEW
 	glewExperimental = true; // Needed for core profile
 	if (glewInit() != GLEW_OK) {
@@ -82,19 +89,24 @@ int main(void)
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 
 	// Load the texture
-	GLuint Texture = loadDDS("../model/hutao/tex/发.DDS");
-	GLuint Texture1 = loadDDS("../model/hutao/tex/服.DDS");
-	GLuint Texture2 = loadDDS("../model/hutao/tex/面.DDS");
+	GLuint Texture1 = loadPNG("../model/hutao/tex/\xc3\xe6.png");
+	GLuint Texture2 = loadPNG("../model/hutao/tex/\xb7\xa2.png");
+	GLuint Texture3 = loadPNG("../model/hutao/tex/\xb7\xfe.png");
 
 	// Get a handle for our "myTextureSampler" uniform
-	GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
+	GLuint TextureID1 = glGetUniformLocation(programID, "myTextureSampler1");
+	GLuint TextureID2 = glGetUniformLocation(programID, "myTextureSampler2");
+	GLuint TextureID3 = glGetUniformLocation(programID, "myTextureSampler3");
 
 	// Read our .pmx file
 	std::vector<unsigned short> indices;
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
-	bool res = loadAssImp("../model/hutao/hutao.pmx", indices, vertices, uvs, normals);
+	std::vector<glm::vec2> texIndex;
+	std::vector<std::string> texs;
+	std::vector<std::string> toons;
+	bool res = loadAssImp("../model/hutao/hutao.pmx", indices, vertices, uvs, normals, texIndex, texs, toons);
 
 	// Load it into a VBO
 
@@ -108,7 +120,20 @@ int main(void)
 	glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
 	glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
 
+	GLuint texIndexbuffer;
+	glGenBuffers(1, &texIndexbuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, texIndexbuffer);
+	glBufferData(GL_ARRAY_BUFFER, texIndex.size() * sizeof(glm::vec2), &texIndex[0], GL_STATIC_DRAW);
+
 	do {
+		// Disable face culling
+		glDisable(GL_CULL_FACE);
+
+		// Or cull back faces
+		// glCullFace(GL_BACK);
+
+		// Or cull front faces
+		// glCullFace(GL_FRONT);
 
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -127,15 +152,18 @@ int main(void)
 		// in the "MVP" uniform
 		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 
-		// Bind our texture in Texture Unit 0
+		// Bind our texture
 		glActiveTexture(GL_TEXTURE0);
-		// glBindTexture(GL_TEXTURE_2D, Texture);
-		// 绑定多个纹理
-		glBindTexture(GL_TEXTURE_2D, Texture);
 		glBindTexture(GL_TEXTURE_2D, Texture1);
+		glUniform1i(TextureID1, 0);
+
+		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, Texture2);
-		// Set our "myTextureSampler" sampler to use Texture Unit 0
-		glUniform1i(TextureID, 0);
+		glUniform1i(TextureID2, 1);
+
+		glActiveTexture(GL_TEXTURE2);
+		glBindTexture(GL_TEXTURE_2D, Texture3);
+		glUniform1i(TextureID3, 2);
 
 		// 1rst attribute buffer : vertices
 		glEnableVertexAttribArray(0);
@@ -161,11 +189,24 @@ int main(void)
 			(void*)0                          // array buffer offset
 		);
 
+		// 3rd attribute buffer : texIndex
+		glEnableVertexAttribArray(2);
+		glBindBuffer(GL_ARRAY_BUFFER, texIndexbuffer);
+		glVertexAttribPointer(
+			2,                                // attribute
+			2,                                // size
+			GL_FLOAT,                         // type
+			GL_FALSE,                         // normalized?
+			0,                                // stride
+			(void*)0                          // array buffer offset
+		);
+
 		// Draw the triangle !
 		glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
+		glDisableVertexAttribArray(2);
 
 		// Swap buffers
 		glfwSwapBuffers(window);
@@ -178,8 +219,11 @@ int main(void)
 	// Cleanup VBO and shader
 	glDeleteBuffers(1, &vertexbuffer);
 	glDeleteBuffers(1, &uvbuffer);
+	glDeleteBuffers(1, &texIndexbuffer);
 	glDeleteProgram(programID);
-	glDeleteTextures(1, &Texture);
+	glDeleteTextures(1, &Texture1);
+	glDeleteTextures(1, &Texture2);
+	glDeleteTextures(1, &Texture3);
 	glDeleteVertexArrays(1, &VertexArrayID);
 
 	// Close OpenGL window and terminate GLFW

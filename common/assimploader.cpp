@@ -126,7 +126,10 @@ bool loadAssImp(
 	std::vector<unsigned short>& indices,
 	std::vector<glm::vec3>& vertices,
 	std::vector<glm::vec2>& uvs,
-	std::vector<glm::vec3>& normals
+	std::vector<glm::vec3>& normals,
+	std::vector<glm::vec2>& texIndex,
+	std::vector<std::string>& texs,
+	std::vector<std::string>& toons
 ) {
 
 	Assimp::Importer importer;
@@ -137,37 +140,64 @@ bool loadAssImp(
 		getchar();
 		return false;
 	}
+	std::map<std::string, unsigned short> texMap;
+	texMap[""] = texMap.size();
 	for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
 		const aiMesh* mesh = scene->mMeshes[i];
 		// Fill vertices positions
 		vertices.reserve(mesh->mNumVertices);
-		for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
-			aiVector3D pos = mesh->mVertices[i];
+		for (unsigned int j = 0; j < mesh->mNumVertices; j++) {
+			aiVector3D pos = mesh->mVertices[j];
 			vertices.push_back(glm::vec3(pos.x, pos.y, pos.z));
 		}
 
 		// Fill vertices texture coordinates
 		uvs.reserve(mesh->mNumVertices);
-		for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
-			aiVector3D UVW = mesh->mTextureCoords[0][i]; // Assume only 1 set of UV coords; AssImp supports 8 UV sets.
+		for (unsigned int j = 0; j < mesh->mNumVertices; j++) {
+			aiVector3D UVW = mesh->mTextureCoords[0][j]; // Assume only 1 set of UV coords; AssImp supports 8 UV sets.
 			uvs.push_back(glm::vec2(UVW.x, UVW.y));
 		}
 
 		// Fill vertices normals
 		normals.reserve(mesh->mNumVertices);
-		for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
-			aiVector3D n = mesh->mNormals[i];
+		for (unsigned int j = 0; j < mesh->mNumVertices; j++) {
+			aiVector3D n = mesh->mNormals[j];
 			normals.push_back(glm::vec3(n.x, n.y, n.z));
 		}
 
 
 		// Fill face indices
 		indices.reserve(3 * mesh->mNumFaces);
-		for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
+		for (unsigned int j = 0; j < mesh->mNumFaces; j++) {
 			// Assume the model has only triangles.
-			indices.push_back(mesh->mFaces[i].mIndices[0]);
-			indices.push_back(mesh->mFaces[i].mIndices[1]);
-			indices.push_back(mesh->mFaces[i].mIndices[2]);
+			indices.push_back(mesh->mFaces[j].mIndices[0]);
+			indices.push_back(mesh->mFaces[j].mIndices[1]);
+			indices.push_back(mesh->mFaces[j].mIndices[2]);
+		}
+
+		// Load materials
+		aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+		aiString texPath;
+		aiString toonPath;
+		if (material->GetTexture(aiTextureType_DIFFUSE, 0, &texPath) == AI_SUCCESS) {
+			texs.push_back(texPath.C_Str());
+		}
+		else {
+			texs.push_back("");
+		}
+		if (material->GetTexture(aiTextureType_OPACITY, 0, &toonPath) == AI_SUCCESS) {
+			toons.push_back(toonPath.C_Str());
+		}
+		else {
+			toons.push_back("");
+		}
+
+		// Fill texture index
+		if (texMap.find(texPath.C_Str()) == texMap.end()) {
+			texMap[texPath.C_Str()] = texMap.size();
+		}
+		for (unsigned int j = 0; j < mesh->mNumVertices; j++) {
+			texIndex.push_back(glm::vec2(texMap[texPath.C_Str()]/10.0f, 0));
 		}
 	}
 

@@ -21,7 +21,10 @@ int main()
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
-	bool res = loadAssImp("../model/hutao/hutao.pmx", indices, vertices, uvs, normals);
+	std::vector<glm::vec2> texIndex;
+	std::vector<std::string> texs;
+	std::vector<std::string> toons;
+	bool res = loadAssImp("../model/hutao/hutao.pmx", indices, vertices, uvs, normals, texIndex, texs, toons);
 
 	OutputDebugStringW((L"顶点数：" + std::to_wstring(vertices.size()) + L"\n").c_str());
 	OutputDebugStringW((L"面数：" + std::to_wstring(indices.size() / 3) + L"\n").c_str());
