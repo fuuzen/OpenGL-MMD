@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PMXLoader", "PMXLoader\PMXL
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticModel", "StaticModel\StaticModel.vcxproj", "{CE780C82-96EF-4784-BB11-DDDBCD103D47}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BoneModel", "BoneModel\BoneModel.vcxproj", "{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Debug|x64.Build.0 = Debug|x64
 		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Release|x64.ActiveCfg = Release|x64
 		{CE780C82-96EF-4784-BB11-DDDBCD103D47}.Release|x64.Build.0 = Release|x64
+		{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}.Debug|x64.ActiveCfg = Debug|x64
+		{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}.Debug|x64.Build.0 = Debug|x64
+		{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}.Release|x64.ActiveCfg = Release|x64
+		{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
