@@ -17,15 +17,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\assimploader.cpp" />
-    <ClCompile Include="..\common\controls.cpp" />
-    <ClCompile Include="..\common\shader.cpp" />
-    <ClCompile Include="..\common\texture.cpp" />
+    <ClCompile Include="..\base\File.cpp" />
+    <ClCompile Include="..\base\Log.cpp" />
+    <ClCompile Include="..\base\MMDCamera.cpp" />
+    <ClCompile Include="..\base\MMDIkSolver.cpp" />
+    <ClCompile Include="..\base\MMDMaterial.cpp" />
+    <ClCompile Include="..\base\MMDModel.cpp" />
+    <ClCompile Include="..\base\MMDMorph.cpp" />
+    <ClCompile Include="..\base\MMDNode.cpp" />
+    <ClCompile Include="..\base\MMDPhysics.cpp" />
+    <ClCompile Include="..\base\Path.cpp" />
+    <ClCompile Include="..\base\PMDFile.cpp" />
+    <ClCompile Include="..\base\PMDModel.cpp" />
+    <ClCompile Include="..\base\PMXFile.cpp" />
+    <ClCompile Include="..\base\PMXModel.cpp" />
+    <ClCompile Include="..\base\Singleton.cpp" />
+    <ClCompile Include="..\base\SjisToUnicode.cpp" />
+    <ClCompile Include="..\base\Time.cpp" />
+    <ClCompile Include="..\base\UnicodeUtil.cpp" />
+    <ClCompile Include="..\base\VMDAnimation.cpp" />
+    <ClCompile Include="..\base\VMDCameraAnimation.cpp" />
+    <ClCompile Include="..\base\VMDFile.cpp" />
+    <ClCompile Include="..\base\VPDFile.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TextureFragmentShader.fragmentshader" />
-    <None Include="TransformVertexShader.vertexshader" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}</ProjectGuid>
