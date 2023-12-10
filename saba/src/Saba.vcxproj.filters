@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\File.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Path.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Singleton.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Time.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\UnicodeUtil.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\OBJ\OBJModel.cpp">
+      <Filter>Model\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\OBJ\tinyobjloader.cpp">
+      <Filter>Model\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\XFile\XFileModel.cpp">
+      <Filter>Model\XFile</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDIkSolver.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDMaterial.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDModel.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDMorph.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDNode.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDPhysics.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDCamera.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMDFile.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMDModel.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMXFile.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMXModel.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\SjisToUnicode.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDAnimation.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDCameraAnimation.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDFile.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VPDFile.cpp">
+      <Filter>Model\MMD</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\File.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Path.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Singleton.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\Time.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Base\UnicodeUtil.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\OBJ\OBJModel.h">
+      <Filter>Model\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\XFile\XFileModel.h">
+      <Filter>Model\XFile</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDFileString.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDIkSolver.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDMaterial.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDModel.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDMorph.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDNode.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDPhysics.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\MMDCamera.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMDFile.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMDModel.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMXFile.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\PMXModel.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\SjisToUnicode.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDAnimation.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDCameraAnimation.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDAnimationCommon.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VMDFile.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Ye\source\repos\saba\src\Saba\Model\MMD\VPDFile.h">
+      <Filter>Model\MMD</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Ye\source\repos\saba\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{1A0D5191-E2D6-395D-848C-7A617DB9CA1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{D5B2144B-97FD-3850-BCF8-834FABE2F9AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\MMD">
+      <UniqueIdentifier>{B4A1F980-287D-34B5-8885-1EE99AA87907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\OBJ">
+      <UniqueIdentifier>{AF0F8928-8999-35E5-AC65-D760961DF4B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\XFile">
+      <UniqueIdentifier>{2AE8C986-11BA-3ECA-8B56-9BF5001E94ED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
