@@ -1,6 +1,0 @@
-[submodule "saba/external/glfw"]
-	path = saba/external/glfw
-	url = https://github.com/glfw/glfw.git
-[submodule "saba/external/glslang"]
-	path = saba/external/glslang
-	url = https://github.com/KhronosGroup/glslang.git
