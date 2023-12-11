@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4A45C566-5B28-36FF-B0D7-65C243BB9B11}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>simple_mmd_viewer_glfw</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ye\source\repos\saba\example\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simple_mmd_viewer_glfw.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simple_mmd_viewer_glfw</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ye\source\repos\saba\example\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simple_mmd_viewer_glfw.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simple_mmd_viewer_glfw</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ye\source\repos\saba\example\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simple_mmd_viewer_glfw.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simple_mmd_viewer_glfw</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ye\source\repos\saba\example\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simple_mmd_viewer_glfw.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simple_mmd_viewer_glfw</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Ye/source/repos/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Ye/source/repos/saba/example/Debug/simple_mmd_viewer_glfw.exe -installedDir C:/Users/Ye/source/repos/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Ye/source/repos/saba/example/../viewer/Saba/Viewer/resource C:/Users/Ye/source/repos/saba/example/Debug/resource
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\src\Debug\Saba.lib;..\external\glfw\src\Debug\glfw3.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\debug\lib\BulletDynamics_Debug.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\debug\lib\BulletCollision_Debug.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\debug\lib\LinearMath_Debug.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\debug\lib\BulletSoftBody_Debug.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Ye/source/repos/saba/example/Debug/simple_mmd_viewer_glfw.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ye/source/repos/saba/example/Debug/simple_mmd_viewer_glfw.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Ye/source/repos/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Ye/source/repos/saba/example/Release/simple_mmd_viewer_glfw.exe -installedDir C:/Users/Ye/source/repos/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Ye/source/repos/saba/example/../viewer/Saba/Viewer/resource C:/Users/Ye/source/repos/saba/example/Release/resource
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\src\Release\Saba.lib;..\external\glfw\src\Release\glfw3.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletDynamics.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletCollision.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\LinearMath.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletSoftBody.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Ye/source/repos/saba/example/Release/simple_mmd_viewer_glfw.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ye/source/repos/saba/example/Release/simple_mmd_viewer_glfw.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Ye/source/repos/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Ye/source/repos/saba/example/MinSizeRel/simple_mmd_viewer_glfw.exe -installedDir C:/Users/Ye/source/repos/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Ye/source/repos/saba/example/../viewer/Saba/Viewer/resource C:/Users/Ye/source/repos/saba/example/MinSizeRel/resource
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\src\MinSizeRel\Saba.lib;..\external\glfw\src\MinSizeRel\glfw3.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletDynamics.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletCollision.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\LinearMath.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletSoftBody.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Ye/source/repos/saba/example/MinSizeRel/simple_mmd_viewer_glfw.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ye/source/repos/saba/example/MinSizeRel/simple_mmd_viewer_glfw.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Ye\source\repos\saba\external\lua;C:\Users\Ye\source\repos\saba\external\glfw\include;C:\Users\Ye\source\repos\saba\src;C:\Users\Ye\source\repos\saba\viewer;C:\Users\Ye\source\repos\saba\external\gl3w\include;C:\Users\Ye\source\repos\saba\external\gli\include;C:\Users\Ye\source\repos\saba\external\glm\include;C:\Users\Ye\source\repos\saba\external\stb\include;C:\Users\Ye\source\repos\saba\external\spdlog\include;C:\Users\Ye\source\repos\saba\external\tinyobjloader\include;C:\Users\Ye\source\repos\saba\external\imgui\include;C:\Users\Ye\source\repos\saba\external\json\include;C:\Users\Ye\source\repos\saba\external\sol2\include;C:\Users\Ye\source\repos\saba\external\tinyxfileloader\include;C:\Users\Ye\source\repos\saba\external\tinyddsloader\include;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Ye/source/repos/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Ye/source/repos/saba/example/RelWithDebInfo/simple_mmd_viewer_glfw.exe -installedDir C:/Users/Ye/source/repos/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Ye/source/repos/saba/example/../viewer/Saba/Viewer/resource C:/Users/Ye/source/repos/saba/example/RelWithDebInfo/resource
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\src\RelWithDebInfo\Saba.lib;..\external\glfw\src\RelWithDebInfo\glfw3.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletDynamics.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletCollision.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\LinearMath.lib;C:\Users\Ye\source\repos\vcpkg\installed\x64-windows\lib\BulletSoftBody.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Ye/source/repos/saba/example/RelWithDebInfo/simple_mmd_viewer_glfw.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ye/source/repos/saba/example/RelWithDebInfo/simple_mmd_viewer_glfw.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Ye\source\repos\saba\example\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ye/source/repos/saba/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ye/source/repos/saba -BC:/Users/Ye/source/repos/saba --check-stamp-file C:/Users/Ye/source/repos/saba/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ye\source\repos\saba\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ye/source/repos/saba/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ye/source/repos/saba -BC:/Users/Ye/source/repos/saba --check-stamp-file C:/Users/Ye/source/repos/saba/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ye\source\repos\saba\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Ye/source/repos/saba/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ye/source/repos/saba -BC:/Users/Ye/source/repos/saba --check-stamp-file C:/Users/Ye/source/repos/saba/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ye\source\repos\saba\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Ye/source/repos/saba/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ye/source/repos/saba -BC:/Users/Ye/source/repos/saba --check-stamp-file C:/Users/Ye/source/repos/saba/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ye\source\repos\saba\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\example\simple_mmd_viewer_glfw.cpp" />
+    <ClCompile Include="C:\Users\Ye\source\repos\saba\external\gl3w\src\gl3w.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Ye\source\repos\saba\ZERO_CHECK.vcxproj">
+      <Project>{84267CDB-C8B0-3E97-8112-008780780458}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Ye\source\repos\saba\src\Saba.vcxproj">
+      <Project>{7D78B319-08F9-3CC0-BE75-FD87C507095D}</Project>
+      <Name>Saba</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Ye\source\repos\saba\external\glfw\src\glfw.vcxproj">
+      <Project>{C5F285B4-8F9A-30F8-AB7A-18810E8B2498}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
