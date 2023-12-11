@@ -16,11 +16,8 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DC185120-91C8-45CF-8496-A7D3D9EDCAEC}</ProjectGuid>
+    <ProjectGuid>{02EDE068-004D-4A4B-9E1C-801676FFA5A6}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22621.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.22621.0</WindowsTargetPlatformVersion>
@@ -30,6 +27,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -66,28 +65,23 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <ExternalIncludePath>$(SolutionDir)includes;$(ExternalIncludePath)</ExternalIncludePath>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <ExternalIncludePath>$(SolutionDir)\includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <PostBuildEvent>
-      <Command>xcopy /y "$(SolutionDir)libs\*.dll" "$(TargetDir)"</Command>
-    </PostBuildEvent>
-    <Link>
-      <AdditionalDependencies>$(SolutionDir)libs\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(SolutionDir)saba\external\lua;$(SolutionDir)saba\external\glfw\include;$(SolutionDir)saba\src;$(SolutionDir)saba\external\gl3w\include;$(SolutionDir)saba\external\gli\include;$(SolutionDir)saba\external\glm\include;$(SolutionDir)saba\external\stb\include;$(SolutionDir)saba\external\spdlog\include;$(SolutionDir)saba\external\tinyobjloader\include;$(SolutionDir)saba\external\imgui\include;$(SolutionDir)saba\external\json\include;$(SolutionDir)saba\external\sol2\include;$(SolutionDir)saba\external\tinyxfileloader\include;$(SolutionDir)saba\external\tidyddsloader\include;$(SolutionDir)include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <PostBuildEvent>
-      <Command>xcopy /y "$(SolutionDir)libs\*.dll" "$(TargetDir)"</Command>
-    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>$(SolutionDir)libs\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\saba\src\Debug\Saba.lib;..\saba\external\glfw\src\Debug\glfw3.lib;..\libs\BulletDynamics_Debug.lib;..\libs\BulletCollision_Debug.lib;..\libs\LinearMath_Debug.lib;..\libs\BulletSoftBody_Debug.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -98,7 +92,7 @@
       <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -114,6 +108,21 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\saba\external\gl3w\src\gl3w.c" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\saba\external\glfw\src\glfw.vcxproj">
+      <Project>{c5f285b4-8f9a-30f8-ab7a-18810e8b2498}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\saba\src\Saba.vcxproj">
+      <Project>{7d78b319-08f9-3cc0-be75-fd87c507095d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\saba\ZERO_CHECK.vcxproj">
+      <Project>{84267cdb-c8b0-3e97-8112-008780780458}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
