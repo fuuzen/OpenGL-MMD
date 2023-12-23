@@ -74,9 +74,10 @@
       <LanguageStandard>stdcpp14</LanguageStandard>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>$(SolutionDir)saba\external\lua;$(SolutionDir)saba\external\glfw\include;$(SolutionDir)saba\src;$(SolutionDir)saba\external\gl3w\include;$(SolutionDir)saba\external\gli\include;$(SolutionDir)saba\external\glm\include;$(SolutionDir)saba\external\stb\include;$(SolutionDir)saba\external\spdlog\include;$(SolutionDir)saba\external\tinyobjloader\include;$(SolutionDir)saba\external\imgui\include;$(SolutionDir)saba\external\json\include;$(SolutionDir)saba\external\sol2\include;$(SolutionDir)saba\external\tinyxfileloader\include;$(SolutionDir)saba\external\tidyddsloader\include;$(SolutionDir)include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BasicRuntimeChecks>
+      </BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
@@ -89,7 +90,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MaxSpeed</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

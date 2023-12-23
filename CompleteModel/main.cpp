@@ -1263,7 +1263,7 @@ bool SampleMain(std::vector<std::string>& args)
 	}
 #endif // defined(GLFW_TRANSPARENT_FRAMEBUFFER)
 
-	auto window = glfwCreateWindow(1280, 800, "simple mmd viewer", nullptr, nullptr);
+	auto window = glfwCreateWindow(1280, 800, "Complete Model", nullptr, nullptr);
 	if (window == nullptr)
 	{
 		return false;
@@ -1418,7 +1418,7 @@ bool SampleMain(std::vector<std::string>& args)
 		}
 		else
 		{
-			appContext.m_viewMat = glm::lookAt(glm::vec3(0, 10, 50), glm::vec3(0, 10, 0), glm::vec3(0, 1, 0));
+			appContext.m_viewMat = glm::lookAt(glm::vec3(0, 10, 100), glm::vec3(0, 10, 0), glm::vec3(0, 1, 0));
 			appContext.m_projMat = glm::perspectiveFovRH(glm::radians(30.0f), float(width), float(height), 1.0f, 10000.0f);
 		}
 
