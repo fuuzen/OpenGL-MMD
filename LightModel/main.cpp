@@ -203,16 +203,18 @@ int main(void)
 		glUniform4fv(u_TexMulFactor, 1, &m_textureMulFactor[0]);
 		glUniform4fv(u_TexAddFactor, 1, &m_textureAddFactor[0]);
 
+		glActiveTexture(GL_TEXTURE0 + 1);
+		glUniform1i(u_SphereTex, 1);
+		glUniform1i(u_SphereTexMode, 0);
+
 		glActiveTexture(GL_TEXTURE0 + 2);
 		glUniform1i(u_ToonTex, 2);
 		glUniform4fv(u_ToonTexMulFactor, 1, &m_toonTextureMulFactor[0]);
 		glUniform4fv(u_ToonTexAddFactor, 1, &m_toonTextureAddFactor[0]);
 		glUniform1i(u_ToonTexMode, 1);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
 		glm::vec3 lightColor = vec3(1.0f, 1.0f, 1.0f);
-		glm::vec3 lightDir = vec3(-0.5f, -1.0f, -0.5f);
+		glm::vec3 lightDir = vec3(-0.5f, -0.1f, -0.5f);
 		glm::mat3 viewMat = glm::mat3(1.0f, 0.0f, 0.0f,
 			0.0f, -1.0f, 0.0f,
 			0.0f, 0.0, -1.0f);
@@ -241,6 +243,8 @@ int main(void)
 
 		glActiveTexture(GL_TEXTURE0 + 3);
 		glBindTexture(GL_TEXTURE_2D, Toon);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 		glUniform1i(u_ToonTex, 3);	
 
 		// 1rst attribute buffer : vertices
