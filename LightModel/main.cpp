@@ -134,7 +134,7 @@ int main(void)
 	GLuint Texture2 = loadPNG("../model/hutao/tex/\xb7\xa2.png");
 	GLuint Texture3 = loadPNG("../model/hutao/tex/\xb7\xfe.png");
 
-	GLuint Toon = loadBMP_custom("../model/hutao/toon_defo.bmp");
+	GLuint Toon = loadBMP_custom("../model/hutao/skin.bmp");
 
 	// Get a handle for our "myTextureSampler" uniform
 	GLuint TextureID1 = glGetUniformLocation(programID, "myTextureSampler1");
