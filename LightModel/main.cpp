@@ -34,7 +34,7 @@ int main(void)
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Open a window and create its OpenGL context
-	window = glfwCreateWindow(1024, 768, "Static Model", NULL, NULL);
+	window = glfwCreateWindow(1024, 768, "Light Model", NULL, NULL);
 	if (window == NULL) {
 		fprintf(stderr, "Failed to open GLFW window.\n");
 		getchar();

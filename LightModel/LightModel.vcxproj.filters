@@ -16,6 +16,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\common\assimploader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\controls.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\texture.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="mmd.frag">
@@ -24,5 +36,19 @@
     <None Include="mmd.vert">
       <Filter>shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\assimploader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\controls.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\texture.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
