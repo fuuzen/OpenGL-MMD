@@ -12,10 +12,10 @@ GLFWwindow* window;
 #include <glm/gtc/matrix_transform.hpp>
 using namespace glm;
 
-#include <common/shader.hpp>
-#include <common/texture.hpp>
-#include <common/controls.hpp>
-#include <common/assimploader.hpp>
+#include "../common/shader.hpp"
+#include "../common/texture.hpp"
+#include "../common/controls.hpp"
+#include "../common/assimploader.hpp"
 
 int main(void)
 {
@@ -83,7 +83,7 @@ int main(void)
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader");
+	GLuint programID = LoadShaders("TransformVertexShader.vert", "TextureFragmentShader.frag");
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");

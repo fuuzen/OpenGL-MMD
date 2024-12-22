@@ -229,7 +229,7 @@ GLuint loadPNG(const char * imagepath) {
 
 	//if there's an error, display it
 	if (error) {
-		printf("decoder error %d: %s\n", error, lodepng_error_text(error));
+		// printf("decoder error %d: %s\n", error, lodepng_error_text(error));
 		getchar();
 		return 0;
 	}

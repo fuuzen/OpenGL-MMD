@@ -1,3 +1,17 @@
+# Build On Linux
+
+目前只考虑 StaticModel
+
+```shell shell
+sudo apt-get install build-essential mesa-utils libassimp-dev liblodepng-dev libgl1-mesa-dev libglew-dev libglfw3-dev  libglm-dev
+mkdir build
+cd build
+cmake ..
+make
+./test
+```
+
+
 # OpenGL-MMD
 Load pmx model and generate demo
 
